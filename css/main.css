@@ -49,12 +49,14 @@ footer {
 }
 
 .branding {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 14px 0 13px 0;
   background-color: white;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 300ms ease-out;
 }
 .branding__logo {
   width: 162px;
@@ -95,4 +97,24 @@ footer {
 .footer__linkIcon {
   margin-right: 10px;
   font-size: 13px;
+}
+
+@media screen and (min-width: 768px) {
+  .branding {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.0225);
+  }
+  footer {
+    padding: 56px 50px 30px 25px;
+    flex-direction: row-reverse;
+  }
+  .footer__links {
+    flex-direction: row;
+    gap: 16px;
+  }
+  .footer__linkItem:nth-child(2) {
+    margin-right: 30px;
+  }
+  .footer__linkItem:nth-child(4) {
+    margin-right: 48px;
+  }
 }

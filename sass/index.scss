@@ -83,3 +83,20 @@
         fill: url(#heartIconGradient#{$i});
     }
 }
+
+@media screen and (min-width: 768px) { // 640 ou 768
+    .bookingProcessSection, .restaurantsSection {
+        display: grid;
+        grid-template-columns: min(calc(100vw - 36px), 1080px);
+        justify-content: center;
+    }
+    .orderedList {
+        flex-direction: row;
+    }
+    .restaurantsSection {
+        &__container {
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+    }
+}

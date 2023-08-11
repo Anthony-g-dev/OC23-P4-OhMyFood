@@ -176,3 +176,18 @@
 #restaurant4 + label .card__heartIcon {
   fill: url(#heartIconGradient4);
 }
+
+@media screen and (min-width: 768px) {
+  .bookingProcessSection, .restaurantsSection {
+    display: grid;
+    grid-template-columns: min(100vw - 36px, 1080px);
+    justify-content: center;
+  }
+  .orderedList {
+    flex-direction: row;
+  }
+  .restaurantsSection__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+}
