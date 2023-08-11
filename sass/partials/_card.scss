@@ -1,6 +1,89 @@
 // ##### IMPORTS #####
-@import "_globals.scss";
+// @import "_globals.scss";
 
 
 // ##### CODE #####
 // Start here.. [!Important (1.0.0.0.0)] [Inline CSS (0.1.0.0.0)] [#ID (0.0.1.0.0)] [.class (0.0.0.1.0)] [tag (0.0.0.0.1)]
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 490px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 15px;
+    &--new {
+        &::before {
+            content: "Nouveau";
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            padding: 7px 9px;
+            color: $greenFont;
+            background-color: $tertiary;
+            border-radius: 2px;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 500;
+        }
+    }
+    &__image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        object-position: bottom;
+    }
+    &__content {
+        padding: 13px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__informations {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    &__description {
+        font-size: 17px;
+        line-height: 20px;
+    }
+    &__heartInput {
+        display: none;
+    }
+    &__heartIcon {
+        -webkit-text-stroke: 1px black;
+        color: transparent;
+    }
+    // &__heartInput:checked + label .card__heartIcon {
+    //     background: -webkit-linear-gradient($primary, $secondary);
+    //     -webkit-background-clip: text;
+    //     -webkit-text-fill-color: transparent;
+    //     transition: background300ms ease-out;
+    // }
+    &__heartInput:checked + label {
+        & .card__heartStop1 {
+            stop-color: $primary;
+        }
+        & .card__heartStop2 {
+            stop-color: $secondary;
+        }
+        & .card__heartIcon {
+            stroke-width: 0;
+        }
+    }
+    &__heartIcon {
+        margin: 7px 7px 0 0;
+        stroke: black;
+        stroke-width: 1px;
+        fill: url(#heartIconGradient);
+        transition: stroke-width 300ms ease-out;
+    }
+    &__heartStop {
+        stop-color: transparent;
+        transition: stop-color 300ms ease-out;
+    }
+}

@@ -4,3 +4,107 @@
 
 // ##### CODE #####
 // Start here.. [!Important (1.0.0.0.0)] [Inline CSS (0.1.0.0.0)] [#ID (0.0.1.0.0)] [.class (0.0.0.1.0)] [tag (0.0.0.0.1)]
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: $background;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 22px;
+}
+h3 {
+    font-size: 18px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
+
+ol {
+    counter-reset: orderedListCounter;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px 25px;
+    background-color: $grey;
+}
+
+
+.branding {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 14px 0 13px 0;
+    background-color: white;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    &__logo {
+        width: 162px;
+        fill: #000000;
+    }
+}
+
+.location {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 17px;
+    background-color: $grey2;
+    &__text {
+        font-weight: 500;
+    }
+}
+
+.footer {
+    &__title {
+        margin: 0;
+        font-family: 'Shrikhand', cursive;
+        color: white;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400;
+        font-style: italic;
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+    &__linkItem {
+        color: white;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &__linkIcon {
+        margin-right: 10px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 768px) { // 640 ou 768
+  
+}
