@@ -126,6 +126,10 @@ footer {
     padding: 31px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.0225);
   }
+  .branding__logo {
+    width: auto;
+    height: 34px;
+  }
   footer {
     padding: 56px 50px 30px 25px;
     flex-direction: row-reverse;
