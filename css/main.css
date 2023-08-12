@@ -1,3 +1,21 @@
+.button {
+  display: inline-block;
+  padding: 13px 19px;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 25px;
+  font-size: 16px;
+  line-height: 19px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 300ms ease-out, filter 300ms ease-out;
+}
+.button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -11,6 +29,10 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   background-color: #f6f6f6;
+}
+
+h1, h2, h3 {
+  margin: 0;
 }
 
 h1 {
@@ -101,6 +123,7 @@ footer {
 
 @media screen and (min-width: 768px) {
   .branding {
+    padding: 31px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.0225);
   }
   footer {

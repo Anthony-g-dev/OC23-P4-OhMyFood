@@ -1,0 +1,162 @@
+body {
+  background-color: white;
+}
+
+.heroImage {
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  max-height: 383px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 60%;
+     object-position: 0 60%;
+}
+
+.menu {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: -48px auto 0 auto;
+  padding: 32px 16px;
+  max-width: 1055px;
+  background-color: #f6f6f6;
+  border-radius: 48px 48px 0 0;
+}
+.menu__heading {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.menu__heartInput {
+  display: none;
+}
+.menu__heartInput:checked + label .menu__heartStop1 {
+  stop-color: #9356dc;
+}
+.menu__heartInput:checked + label .menu__heartStop2 {
+  stop-color: #ff79da;
+}
+.menu__heartInput:checked + label .menu__heartIcon {
+  stroke-width: 0;
+}
+.menu__heartIcon {
+  stroke: black;
+  stroke-width: 1px;
+  fill: url(#heartIconGradient);
+  transition: stroke-width 300ms ease-out;
+}
+.menu__heartStop {
+  stop-color: transparent;
+  transition: stop-color 300ms ease-out;
+}
+.menu__category {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu__categoryTitle {
+  position: relative;
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+.menu__categoryTitle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #98e2cf;
+}
+.menu__productsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu__orderButton {
+  margin: auto;
+  padding: 13px 48px;
+}
+
+.restaurantTitle {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.productInput {
+  display: none;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.product__content {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: end;
+  transition: width 300ms ease-out;
+}
+.product__description {
+  flex: 1;
+  display: flex;
+  width: inherit;
+  flex-direction: column;
+}
+.product__title, .product__subtitle {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.product__title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+.product__subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+}
+.product__price {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.product__checkmark {
+  position: absolute;
+  right: -59px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 59px;
+  height: 100%;
+  background-color: #98e2cf;
+  border-radius: 0 15px 15px 0;
+  font-size: 20px;
+  color: white;
+  transition: right 300ms ease-out;
+}
+
+.productInput:checked + label .product__content {
+  width: calc(100% - 59px);
+}
+.productInput:checked + label .product__checkmark {
+  right: 0;
+}

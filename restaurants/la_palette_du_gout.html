@@ -14,8 +14,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Description">
 		<!-- <link rel="icon" type="image/png" href="img/icon.png"/> -->
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/menu.css">
 		<title>Ohmyfood</title>
 	</head>
 	<body>
@@ -34,125 +34,191 @@
 					</g>
 				</svg>				
 			</div>
-			<div class="location">
-				<i class="fa-solid fa-location-dot location__icon"></i><span class="location__text">Paris, Belleville</span>
-			</div>
 		</header>
 		<main>
-			<section class="callToActionSection">
-				<h1 class="callToActionSection__title">Reservez le menu qui vous convient</h1>
-				<p class="callToActionSection__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-				<a href="#restaurantsSection" class="button callToActionSection__button">Explorer nos restaurants</a>
-			</section>
-			<section class="bookingProcessSection">
-				<h1>Fonctionnement</h1>
-				<ol class="orderedList">
-					<li class="orderedList__item"><span><i class="fa-solid fa-mobile-screen-button orderedList__itemIcon"></i>Choisissez un restaurant</span></li>
-					<li class="orderedList__item"><span><i class="fa-solid fa-list-ul orderedList__itemIcon"></i>Composez votre menu</span></li>
-					<li class="orderedList__item"><span><i class="fa-solid fa-store orderedList__itemIcon orderedList__itemIcon--alt"></i>Dégustez au restaurant</span></li>
-				</ol>
-			</section>
-			<section class="restaurantsSection" id="restaurantsSection">
-				<h1>Restaurants</h1>
-				<div class="restaurantsSection__container">
-					<!-- RESTAURANT #1 -->
-					<a class="card card--new" href="restaurants/la_palette_du_gout.html">
-						<img class="card__image" src="img/restaurants/la_palette_du_gout.jpg" alt="La palette du goût">
-						<div class="card__content">
-							<div class="card__informations">
-								<span class="card__title">La palette du goût</span>
-								<span class="card__description">Ménilmontant</span>
-							</div>
-							<div class="card__heartContainer">
-								<input class="card__heartInput" id="restaurant1" type="checkbox">
-								<label for="restaurant1">
-									<svg class="card__heartIcon" width="22.019" height="20.976" fill="none" version="1.1" viewBox="0 0 22.019 20.976" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-										<defs>
-											<linearGradient id="heartIconGradient1" x1="11.009" x2="11.009" y1="3.7778" y2="20.501" gradientUnits="userSpaceOnUse">
-												<stop class="card__heartStop card__heartStop1" offset="0"/>
-												<stop class="card__heartStop card__heartStop2" offset="1"/>
-											</linearGradient>
-										</defs>
-										<path d="m5.6929 0.50041c-1.1467 0.01492-2.2791 0.44013-3.207 1.3027-2.4942 2.3225-2.6323 6.5209-0.39258 9.0469l8.3145 9.3652c0.3381 0.3806 0.86102 0.3806 1.1992 0l8.3145-9.3652c2.2436-2.5258 2.1074-6.7244-0.38672-9.0469h-2e-3c-2.1208-1.9713-5.3009-1.6497-7.3027 0.60352l-0.8457 0.95117-0.375 0.41992-0.37305-0.41992-0.8457-0.95117-2e-3 -0.00195c-1.1234-1.2671-2.6213-1.9235-4.0957-1.9043z" style="stroke-miterlimit:3.9"/>
-									</svg>
-								</label>	
-							</div>					   
-						</div>
-					</a>
-					<!-- RESTAURANT #2 -->
-					<a class="card card--new" href="#">
-						<img class="card__image" src="img/restaurants/la_note_enchantee.jpg" alt="La note enchantée">
-						<div class="card__content">
-							<div class="card__informations">
-								<span class="card__title">La note enchantée</span>
-								<span class="card__description">Charonne</span>
-							</div>
-							<div class="card__heartContainer">
-								<input class="card__heartInput" id="restaurant2" type="checkbox">
-								<label for="restaurant2">
-									<svg class="card__heartIcon" width="22.019" height="20.976" fill="none" version="1.1" viewBox="0 0 22.019 20.976" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-										<defs>
-											<linearGradient id="heartIconGradient2" x1="11.009" x2="11.009" y1="3.7778" y2="20.501" gradientUnits="userSpaceOnUse">
-												<stop class="card__heartStop card__heartStop1" offset="0"/>
-												<stop class="card__heartStop card__heartStop2" offset="1"/>
-											</linearGradient>
-										</defs>
-										<path d="m5.6929 0.50041c-1.1467 0.01492-2.2791 0.44013-3.207 1.3027-2.4942 2.3225-2.6323 6.5209-0.39258 9.0469l8.3145 9.3652c0.3381 0.3806 0.86102 0.3806 1.1992 0l8.3145-9.3652c2.2436-2.5258 2.1074-6.7244-0.38672-9.0469h-2e-3c-2.1208-1.9713-5.3009-1.6497-7.3027 0.60352l-0.8457 0.95117-0.375 0.41992-0.37305-0.41992-0.8457-0.95117-2e-3 -0.00195c-1.1234-1.2671-2.6213-1.9235-4.0957-1.9043z" style="stroke-miterlimit:3.9"/>
-									</svg>
-								</label>	
-							</div>		
-						</div>
-					</a>
-					<!-- RESTAURANT #3 -->
-					<a class="card" href="#">
-						<img class="card__image" src="img/restaurants/a_la_francaise.jpg" alt="À la française">
-						<div class="card__content">
-							<div class="card__informations">
-								<span class="card__title">À la française</span>
-								<span class="card__description">Cité Rouge</span>
-							</div>
-							<div class="card__heartContainer">
-								<input class="card__heartInput" id="restaurant3" type="checkbox">
-								<label for="restaurant3">
-									<svg class="card__heartIcon" width="22.019" height="20.976" fill="none" version="1.1" viewBox="0 0 22.019 20.976" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-										<defs>
-											<linearGradient id="heartIconGradient3" x1="11.009" x2="11.009" y1="3.7778" y2="20.501" gradientUnits="userSpaceOnUse">
-												<stop class="card__heartStop card__heartStop1" offset="0"/>
-												<stop class="card__heartStop card__heartStop2" offset="1"/>
-											</linearGradient>
-										</defs>
-										<path d="m5.6929 0.50041c-1.1467 0.01492-2.2791 0.44013-3.207 1.3027-2.4942 2.3225-2.6323 6.5209-0.39258 9.0469l8.3145 9.3652c0.3381 0.3806 0.86102 0.3806 1.1992 0l8.3145-9.3652c2.2436-2.5258 2.1074-6.7244-0.38672-9.0469h-2e-3c-2.1208-1.9713-5.3009-1.6497-7.3027 0.60352l-0.8457 0.95117-0.375 0.41992-0.37305-0.41992-0.8457-0.95117-2e-3 -0.00195c-1.1234-1.2671-2.6213-1.9235-4.0957-1.9043z" style="stroke-miterlimit:3.9"/>
-									</svg>
-								</label>	
-							</div>
-						</div>
-					</a>
-					<!-- RESTAURANT #4 -->
-					<a class="card" href="#">
-						<img class="card__image" src="img/restaurants/le_delice_des_sens.jpg" alt="Le délice des sens">
-						<div class="card__content">
-							<div class="card__informations">
-								<span class="card__title">Le délice des sens</span>
-								<span class="card__description">Folie-Méricourt</span>
-							</div>
-							<div class="card__heartContainer">
-								<input class="card__heartInput" id="restaurant4" type="checkbox">
-								<label for="restaurant4">
-									<svg class="card__heartIcon" width="22.019" height="20.976" fill="none" version="1.1" viewBox="0 0 22.019 20.976" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-										<defs>
-											<linearGradient id="heartIconGradient4" x1="11.009" x2="11.009" y1="3.7778" y2="20.501" gradientUnits="userSpaceOnUse">
-												<stop class="card__heartStop card__heartStop1" offset="0"/>
-												<stop class="card__heartStop card__heartStop2" offset="1"/>
-											</linearGradient>
-										</defs>
-										<path d="m5.6929 0.50041c-1.1467 0.01492-2.2791 0.44013-3.207 1.3027-2.4942 2.3225-2.6323 6.5209-0.39258 9.0469l8.3145 9.3652c0.3381 0.3806 0.86102 0.3806 1.1992 0l8.3145-9.3652c2.2436-2.5258 2.1074-6.7244-0.38672-9.0469h-2e-3c-2.1208-1.9713-5.3009-1.6497-7.3027 0.60352l-0.8457 0.95117-0.375 0.41992-0.37305-0.41992-0.8457-0.95117-2e-3 -0.00195c-1.1234-1.2671-2.6213-1.9235-4.0957-1.9043z" style="stroke-miterlimit:3.9"/>
-									</svg>
-								</label>	
-							</div>
-						</div>
-					</a>
-				</div>
-			</section>
+			<img class="heroImage" src="../img/restaurants/la_palette_du_gout.jpg" alt="La palette du goût">
+            <section class="menu">
+                <div class="menu__heading">
+                    <h1 class="restaurantTitle">La palette du goût</h1>
+                    <div class="menu__heartContainer">
+                        <input class="menu__heartInput" id="currentMenu" type="checkbox">
+                        <label for="currentMenu">
+                            <svg class="menu__heartIcon" width="22.019" height="20.976" fill="none" version="1.1" viewBox="0 0 22.019 20.976" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs>
+                                    <linearGradient id="heartIconGradient" x1="11.009" x2="11.009" y1="3.7778" y2="20.501" gradientUnits="userSpaceOnUse">
+                                        <stop class="menu__heartStop menu__heartStop1" offset="0"/>
+                                        <stop class="menu__heartStop menu__heartStop2" offset="1"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="m5.6929 0.50041c-1.1467 0.01492-2.2791 0.44013-3.207 1.3027-2.4942 2.3225-2.6323 6.5209-0.39258 9.0469l8.3145 9.3652c0.3381 0.3806 0.86102 0.3806 1.1992 0l8.3145-9.3652c2.2436-2.5258 2.1074-6.7244-0.38672-9.0469h-2e-3c-2.1208-1.9713-5.3009-1.6497-7.3027 0.60352l-0.8457 0.95117-0.375 0.41992-0.37305-0.41992-0.8457-0.95117-2e-3 -0.00195c-1.1234-1.2671-2.6213-1.9235-4.0957-1.9043z" style="stroke-miterlimit:3.9"/>
+                            </svg>
+                        </label>	
+                    </div>	
+                </div>
+                <!-- STARTERS -->
+                <div class="menu__category">
+                    <h2 class="menu__categoryTitle">Entrées</h2>
+                    <div class="menu__productsContainer">
+                        <!-- PRODUCT #1 -->
+                        <input class="productInput" id="product1" type="checkbox">
+                        <label class="product" for="product1">
+                            <div class="product__content">
+                                <div class="product__description">
+                                    <span class="product__title">Fricassée d'escargots</span>
+                                    <span class="product__subtitle">Assaisonné au yuzu</span>
+                                </div>
+                                <div>
+                                    <span class="product__price">25€</span>
+                                </div>
+                            </div>
+                            <div class="product__checkmark">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+                        <!-- PRODUCT #2 -->
+                        <input class="productInput" id="product2" type="checkbox">
+                        <label class="product" for="product2">
+                            <div class="product__content">
+                                <div class="product__description">
+                                    <span class="product__title">Foie gras de canard mi-cuit</span>
+                                    <span class="product__subtitle">Et ses copeaux de truffe noire</span>
+                                </div>
+                                <div>
+                                    <span class="product__price">35€</span>
+                                </div>
+                            </div>
+                            <div class="product__checkmark">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+                        <!-- PRODUCT #3 -->
+                        <input class="productInput" id="product3" type="checkbox">
+                        <label class="product" for="product3">
+                            <div class="product__content">
+                                <div class="product__description">
+                                    <span class="product__title">Œuf au plat</span>
+                                    <span class="product__subtitle">Assaisonné à la truffe sur lit de caviar</span>
+                                </div>
+                                <div>
+                                    <span class="product__price">20€</span>
+                                </div>
+                            </div>
+                            <div class="product__checkmark">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <!-- MAIN COURSES -->
+                <div class="menu__category">
+                    <h2 class="menu__categoryTitle">Plats</h2>
+                    <div class="menu__productsContainer">
+                        <!-- PRODUCT #4 -->
+                        <input class="productInput" id="product4" type="checkbox">
+                        <label class="product" for="product4">
+                            <div class="product__content">
+                                <div class="product__description">
+                                    <span class="product__title">Filet de bœuf aux herbes</span>
+                                    <span class="product__subtitle">Accompagné de sa ribambelle de légumes</span>
+                                </div>
+                                <div>
+                                    <span class="product__price">40€</span>
+                                </div>
+                            </div>
+                            <div class="product__checkmark">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+                        <!-- PRODUCT #5 -->
+                        <input class="productInput" id="product5" type="checkbox">
+                        <label class="product" for="product5">
+                            <div class="product__content">
+                                <div class="product__description">
+                                    <span class="product__title">Parmentier de queue de bœuf</span>
+                                    <span class="product__subtitle">À la truffe noire sur sa purée de panais</span>
+                                </div>
+                                <div>
+                                    <span class="product__price">35€</span>
+                                </div>
+                            </div>
+                            <div class="product__checkmark">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+                        <!-- PRODUCT #6 -->
+                        <input class="productInput" id="product6" type="checkbox">
+                        <label class="product" for="product6">
+                            <div class="product__content">
+                                <div class="product__description">
+                                    <span class="product__title">Filet de turbot</span>
+                                    <span class="product__subtitle">Aux agrumes</span>
+                                </div>
+                                <div>
+                                    <span class="product__price">44€</span>
+                                </div>
+                            </div>
+                            <div class="product__checkmark">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <!-- DESSERTS -->
+                <div class="menu__category">
+                    <h2 class="menu__categoryTitle">Desserts</h2>
+                    <div class="menu__productsContainer">
+                        <!-- PRODUCT #7 -->
+                        <input class="productInput" id="product7" type="checkbox">
+                        <label class="product" for="product7">
+                            <div class="product__content">
+                                <div class="product__description">
+                                    <span class="product__title">Paris-Brest</span>
+                                    <span class="product__subtitle">Revisité</span>
+                                </div>
+                                <div>
+                                    <span class="product__price">18€</span>
+                                </div>
+                            </div>
+                            <div class="product__checkmark">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+                        <!-- PRODUCT #8 -->
+                        <input class="productInput" id="product8" type="checkbox">
+                        <label class="product" for="product8">
+                            <div class="product__content">
+                                <div class="product__description">
+                                    <span class="product__title">Macaron au chocolat d'exception </span>
+                                    <span class="product__subtitle">Et glace à la vanille de Madagascar</span>
+                                </div>
+                                <div>
+                                    <span class="product__price">22€</span>
+                                </div>
+                            </div>
+                            <div class="product__checkmark">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+                        <!-- PRODUCT #9 -->
+                        <input class="productInput" id="product9" type="checkbox">
+                        <label class="product" for="product9">
+                            <div class="product__content">
+                                <div class="product__description">
+                                    <span class="product__title">Mousse au chocolat</span>
+                                    <span class="product__subtitle">Au piment d'Espelette et à la truffe noire</span>
+                                </div>
+                                <div>
+                                    <span class="product__price">23€</span>
+                                </div>
+                            </div>
+                            <div class="product__checkmark">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <a href="#" class="button menu__orderButton">Commander</a>
+            </section>
 		</main>
 		<footer>
 			<h2 class="footer__title">ohmyfood</h2>

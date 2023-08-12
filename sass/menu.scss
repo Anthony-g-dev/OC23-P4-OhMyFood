@@ -1,0 +1,175 @@
+// ##### IMPORTS #####
+@import "_globals.scss";
+
+
+// ##### CODE #####
+// Start here.. [!Important (1.0.0.0.0)] [Inline CSS (0.1.0.0.0)] [#ID (0.0.1.0.0)] [.class (0.0.0.1.0)] [tag (0.0.0.0.1)]
+body {
+    background-color: white;
+}
+
+.heroImage {
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    max-height: 383px;
+    object-fit: cover;
+    object-position: 0 60%;
+}
+
+.menu {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: -48px auto 0 auto;
+    padding: 32px 16px;
+    max-width: 1055px;
+    background-color: $background;
+    border-radius: 48px 48px 0 0;
+    &__heading {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+    &__heartInput {
+        display: none;
+    }
+    &__heartInput:checked + label {
+        & .menu__heartStop1 {
+            stop-color: $primary;
+        }
+        & .menu__heartStop2 {
+            stop-color: $secondary;
+        }
+        & .menu__heartIcon {
+            stroke-width: 0;
+        }
+    }
+    &__heartIcon {
+        stroke: black;
+        stroke-width: 1px;
+        fill: url(#heartIconGradient);
+        transition: stroke-width 300ms ease-out;
+    }
+    &__heartStop {
+        stop-color: transparent;
+        transition: stop-color 300ms ease-out;
+    }
+    &__category {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__categoryTitle {
+        position: relative;
+        padding-bottom: 8px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        text-transform: uppercase;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: $tertiary;
+        }
+    }
+    &__productsContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__orderButton {
+        margin: auto;
+        padding: 13px 48px;
+    }
+}
+
+.restaurantTitle {
+    font-family: 'Shrikhand', cursive;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.productInput {
+    display: none;
+}
+
+.product {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    &__content {
+        display: flex;
+        flex-direction: row;
+        padding: 16px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: end;
+        transition: width 300ms ease-out;
+    }
+    &__description {
+        flex: 1;
+        display: flex;
+        width: inherit;
+        flex-direction: column;
+    }
+    &__title, &__subtitle {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+    &__subtitle {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 18px;
+    }
+    &__price {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 18px;       
+    }
+    &__checkmark {
+        position: absolute;
+        right: -59px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 59px;
+        height: 100%;
+        background-color: $tertiary;
+        border-radius: 0 15px 15px 0;
+        font-size: 20px;
+        color: white;
+        transition: right 300ms ease-out;
+    }
+}
+
+.productInput:checked + label {
+    .product__content {
+        width: calc(100% - 59px);
+    }
+    .product__checkmark {
+        right: 0;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    
+}

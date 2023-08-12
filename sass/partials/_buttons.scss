@@ -5,7 +5,9 @@
 // ##### CODE #####
 // Start here.. [!Important (1.0.0.0.0)] [Inline CSS (0.1.0.0.0)] [#ID (0.0.1.0.0)] [.class (0.0.0.1.0)] [tag (0.0.0.0.1)]
 .button {
+    display: inline-block;
     padding: 13px 19px;
+    width: fit-content;
     color: white;
     background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
     border-radius: 25px;

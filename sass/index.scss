@@ -1,7 +1,6 @@
 // ##### IMPORTS #####
 @import "_globals.scss";
 @import "partials/card";
-@import "partials/buttons";
 
 
 // ##### CODE #####
@@ -84,7 +83,8 @@
     }
 }
 
-@media screen and (min-width: 768px) { // 640 ou 768
+
+@media screen and (min-width: 768px) {
     .bookingProcessSection, .restaurantsSection {
         display: grid;
         grid-template-columns: min(calc(100vw - 36px), 1080px);

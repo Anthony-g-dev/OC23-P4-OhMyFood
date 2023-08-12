@@ -49,10 +49,6 @@
 .card__heartInput {
   display: none;
 }
-.card__heartIcon {
-  -webkit-text-stroke: 1px black;
-  color: transparent;
-}
 .card__heartInput:checked + label .card__heartStop1 {
   stop-color: #9356dc;
 }
@@ -66,27 +62,11 @@
   margin: 7px 7px 0 0;
   stroke: black;
   stroke-width: 1px;
-  fill: url(#heartIconGradient);
   transition: stroke-width 300ms ease-out;
 }
 .card__heartStop {
   stop-color: transparent;
   transition: stop-color 300ms ease-out;
-}
-
-.button {
-  padding: 13px 19px;
-  color: white;
-  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
-  border-radius: 25px;
-  font-size: 16px;
-  line-height: 19px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 300ms ease-out, filter 300ms ease-out;
-}
-.button:hover {
-  filter: brightness(1.1);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
 .callToActionSection {
