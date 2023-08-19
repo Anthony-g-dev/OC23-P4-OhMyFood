@@ -54,13 +54,19 @@ body {
         }
         & .menu__heartIcon {
             stroke-width: 0;
+            transform: scale(1.1);
+            transition: stroke-width 300ms ease-out, transform 300ms cubic-bezier(0.68, -11, 0.27, 12);
         }
     }
     &__heartIcon {
         stroke: black;
         stroke-width: 1px;
         fill: url(#heartIconGradient);
-        transition: stroke-width 300ms ease-out;
+        transform: scale(1);
+        transition: stroke-width 300ms ease-out, transform 300ms cubic-bezier(0.68, -11, 0.27, 12);
+        &:hover {
+            cursor: pointer;
+        }
     }
     &__heartStop {
         stop-color: transparent;
@@ -110,6 +116,7 @@ body {
 }
 
 .product {
+    opacity: 0;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -117,6 +124,7 @@ body {
     border-radius: 15px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    animation: 300ms ease-out forwards productReveal;
     &__content {
         display: flex;
         flex-direction: row;
@@ -167,6 +175,9 @@ body {
         color: white;
         transition: right 300ms ease-out;
     }
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .productInput:checked + label {
@@ -175,6 +186,23 @@ body {
     }
     .product__checkmark {
         right: 0;
+    }
+}
+
+@for $i from 1 through 10 {
+    .product:nth-child(#{$i}n) {
+        animation-delay: #{$i * 300 - 300}ms;
+    }
+}
+
+
+@keyframes productReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-150px) rotateX(-90deg);
+    } to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg);
     }
 }
 

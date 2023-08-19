@@ -56,7 +56,7 @@
         border-radius: 12px;
         font-size: 14px;
         line-height: 17px;
-        translate: -50%;
+        transform: translate(-50%);
     }
     &__itemIcon {
         margin-right: 27px;
@@ -80,6 +80,58 @@
 @for $i from 1 through 4 {
     #restaurant#{$i} + label .card__heartIcon {
         fill: url(#heartIconGradient#{$i});
+    }
+}
+
+
+.loader {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    color: $primary;
+    background-color: white;
+    font-size: max(6px, min(128px, 8vw));
+    font-family: 'Shrikhand', cursive;
+    letter-spacing: max(6px, min(32px, 2vw));
+    font-style: italic;
+    font-weight: bold;
+    animation: loaderDisapear 3s 1 forwards;
+    span {
+        transform: translateY(-10px);
+        animation: loadingLetters 0.7s 5;
+        @for $i from 1 through 7 {
+            &:nth-child(#{$i+1}) {
+                animation-delay: #{$i*.1}s;
+            }
+        }
+    }
+  }
+
+
+@keyframes loadingLetters {
+    0%, 100% {
+        transform: translateY(-10px);
+        color: $primary;
+    }
+    50% {
+        transform: translateY(10px);
+        color: $secondary;
+    }
+}
+
+@keyframes loaderDisapear {
+    0%, 66% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 

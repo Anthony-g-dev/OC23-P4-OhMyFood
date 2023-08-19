@@ -57,12 +57,18 @@
 }
 .card__heartInput:checked + label .card__heartIcon {
   stroke-width: 0;
+  transform: scale(1.1);
+  transition: stroke-width 300ms ease-out, transform 300ms cubic-bezier(0.68, -11, 0.27, 12);
 }
 .card__heartIcon {
   margin: 7px 7px 0 0;
   stroke: black;
   stroke-width: 1px;
-  transition: stroke-width 300ms ease-out;
+  transform: scale(1);
+  transition: stroke-width 300ms ease-out, transform 300ms cubic-bezier(0.68, -11, 0.27, 12);
+}
+.card__heartIcon:hover {
+  cursor: pointer;
 }
 .card__heartStop {
   stop-color: transparent;
@@ -121,7 +127,7 @@
   border-radius: 12px;
   font-size: 14px;
   line-height: 17px;
-  translate: -50%;
+  transform: translate(-50%);
 }
 .orderedList__itemIcon {
   margin-right: 27px;
@@ -157,6 +163,70 @@
   fill: url(#heartIconGradient4);
 }
 
+.loader {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: #9356dc;
+  background-color: white;
+  font-size: max(6px, min(128px, 8vw));
+  font-family: "Shrikhand", cursive;
+  letter-spacing: max(6px, min(32px, 2vw));
+  font-style: italic;
+  font-weight: bold;
+  animation: loaderDisapear 3s 1 forwards;
+}
+.loader span {
+  transform: translateY(-10px);
+  animation: loadingLetters 0.7s 5;
+}
+.loader span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.loader span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.loader span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.loader span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.loader span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.loader span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.loader span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+@keyframes loadingLetters {
+  0%, 100% {
+    transform: translateY(-10px);
+    color: #9356dc;
+  }
+  50% {
+    transform: translateY(10px);
+    color: #ff79da;
+  }
+}
+@keyframes loaderDisapear {
+  0%, 66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @media screen and (min-width: 768px) {
   .bookingProcessSection, .restaurantsSection {
     display: grid;

@@ -63,13 +63,19 @@
         }
         & .card__heartIcon {
             stroke-width: 0;
+            transform: scale(1.1);
+            transition: stroke-width 300ms ease-out, transform 300ms cubic-bezier(0.68, -11, 0.27, 12);
         }
     }
     &__heartIcon {
         margin: 7px 7px 0 0;
         stroke: black;
         stroke-width: 1px;
-        transition: stroke-width 300ms ease-out;
+        transform: scale(1);
+        transition: stroke-width 300ms ease-out, transform 300ms cubic-bezier(0.68, -11, 0.27, 12);
+        &:hover {
+            cursor: pointer;
+        }
     }
     &__heartStop {
         stop-color: transparent;
