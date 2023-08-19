@@ -33,8 +33,10 @@ body {
   border-radius: 48px 48px 0 0;
 }
 .menu__heading {
+  padding: 0 8px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   gap: 32px;
 }
 .menu__heartInput {
