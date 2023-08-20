@@ -139,6 +139,9 @@
 
 .restaurantsSection {
   padding: 27px 17px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
 }
 .restaurantsSection__container {
   display: grid;
