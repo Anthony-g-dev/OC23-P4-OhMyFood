@@ -1,6 +1,6 @@
 // ##### IMPORTS #####
-@import "_globals.scss";
-@import "partials/buttons";
+@use "_globals.scss" as *;
+@use "partials/buttons";
 
 
 // ##### CODE #####

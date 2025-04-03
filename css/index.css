@@ -1,3 +1,150 @@
+.button {
+  display: inline-block;
+  padding: 13px 19px;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 25px;
+  font-size: 16px;
+  line-height: 19px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 300ms ease-out, filter 300ms ease-out;
+}
+.button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f6f6f6;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+ol {
+  counter-reset: orderedListCounter;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 25px;
+  background-color: #353535;
+}
+
+.branding {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 14px 0 13px 0;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 300ms ease-out;
+}
+.branding__logo {
+  width: 162px;
+  fill: #000000;
+}
+
+.location {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 17px;
+  background-color: #eaeaea;
+}
+.location__text {
+  font-weight: 500;
+}
+
+.footer__title {
+  margin: 0;
+  font-family: "Shrikhand", cursive;
+  color: white;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: italic;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer__linkItem {
+  color: white;
+  font-size: 16px;
+  line-height: 19px;
+}
+.footer__linkIcon {
+  margin-right: 10px;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 768px) {
+  .branding {
+    padding: 31px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.0225);
+  }
+  .branding__logo {
+    width: auto;
+    height: 34px;
+  }
+  footer {
+    padding: 56px 50px 30px 25px;
+    flex-direction: row-reverse;
+  }
+  .footer__links {
+    flex-direction: row;
+    gap: 16px;
+  }
+  .footer__linkItem:nth-child(2) {
+    margin-right: 30px;
+  }
+  .footer__linkItem:nth-child(4) {
+    margin-right: 48px;
+  }
+}
 .card {
   position: relative;
   width: 100%;

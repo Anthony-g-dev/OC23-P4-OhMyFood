@@ -1,6 +1,7 @@
 // ##### IMPORTS #####
-@import "_globals.scss";
-@import "partials/card";
+@use "_globals.scss" as *;
+@use "main.scss";
+@use "partials/card";
 
 
 // ##### CODE #####

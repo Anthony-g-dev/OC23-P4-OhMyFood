@@ -1,5 +1,6 @@
 // ##### IMPORTS #####
-@import "_globals.scss";
+@use "_globals.scss" as *;
+@use "main.scss";
 
 
 // ##### CODE #####
