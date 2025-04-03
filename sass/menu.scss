@@ -21,14 +21,12 @@ body {
 .goBackArrow {
     position: fixed;
     left: 20px;
-    font-size: 24px;
+    @include text-style(24px);
 }
 
 .menu {
     z-index: 1;
     position: relative;
-    // display: flex;
-    // flex-direction: column;
     display: grid;
     grid-template-columns: min(calc(100vw - 32px), 634px);
     justify-content: center;
@@ -40,9 +38,7 @@ body {
     border-radius: 48px 48px 0 0;
     &__heading {
         padding: 0 8px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include flex-container(row, space-between);
         gap: 32px;
     }
     &__heartInput {
@@ -76,16 +72,13 @@ body {
         transition: stop-color 300ms ease-out;
     }
     &__category {
-        display: flex;
-        flex-direction: column;
+        @include flex-container(column);
         gap: 12px;
     }
     &__categoryTitle {
         position: relative;
         padding-bottom: 8px;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 19px;
+        @include text-style(16px, 300, 19px);
         text-transform: uppercase;
         &::before {
             content: "";
@@ -98,8 +91,7 @@ body {
         }
     }
     &__productsContainer {
-        display: flex;
-        flex-direction: column;
+        @include flex-container(column);
         gap: 12px;
     }
     &__orderButton {
@@ -110,8 +102,7 @@ body {
 
 .restaurantTitle {
     font-family: 'Shrikhand', cursive;
-    font-size: 28px;
-    font-weight: 400;
+    @include text-style(28px, 400, 28px);
 }
 
 .productInput {
@@ -121,27 +112,23 @@ body {
 .product {
     opacity: 0;
     position: relative;
-    display: flex;
-    flex-direction: row;
+    @include flex-container(row);
     background-color: white;
     border-radius: 15px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     animation: 300ms ease-out forwards productReveal;
     &__content {
-        display: flex;
-        flex-direction: row;
+        @include flex-container(row, space-between);
         padding: 16px;
         width: 100%;
-        justify-content: space-between;
         align-items: end;
         transition: width 300ms ease-out;
     }
     &__description {
         flex: 1;
-        display: flex;
+        @include flex-container(column);
         width: inherit;
-        flex-direction: column;
     }
     &__title, &__subtitle {
         text-overflow: ellipsis;
@@ -149,32 +136,23 @@ body {
         white-space: nowrap;
     }
     &__title {
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 21px;
+        @include text-style(18px, 500, 21px);
     }
     &__subtitle {
-        font-size: 15px;
-        font-weight: 300;
-        line-height: 18px;
+        @include text-style(15px, 300, 18px);
     }
     &__price {
-        font-size: 15px;
-        font-weight: 700;
-        line-height: 18px;       
+        @include text-style(15px, 700, 18px);
     }
     &__checkmark {
         position: absolute;
         right: -59px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex-container(column, center, center);
         width: 59px;
         height: 100%;
         background-color: $tertiary;
         border-radius: 0 15px 15px 0;
-        font-size: 20px;
+        @include text-style(20px);
         color: white;
         transition: right 300ms ease-out;
     }

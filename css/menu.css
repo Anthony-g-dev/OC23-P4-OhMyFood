@@ -7,6 +7,7 @@
   background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 25px;
   font-size: 16px;
+  font-weight: 400;
   line-height: 19px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition: box-shadow 300ms ease-out, filter 300ms ease-out;
@@ -37,8 +38,8 @@ h1, h2, h3 {
 
 h1 {
   font-size: 24px;
-  line-height: 28px;
   font-weight: 700;
+  line-height: 28px;
 }
 
 h2 {
@@ -102,8 +103,8 @@ footer {
   font-family: "Shrikhand", cursive;
   color: white;
   font-size: 18px;
-  line-height: 26px;
   font-weight: 400;
+  line-height: 26px;
   font-style: italic;
 }
 .footer__links {
@@ -114,6 +115,7 @@ footer {
 .footer__linkItem {
   color: white;
   font-size: 16px;
+  font-weight: 400;
   line-height: 19px;
 }
 .footer__linkIcon {
@@ -250,6 +252,7 @@ body {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-weight: 400;
+  line-height: 28px;
 }
 
 .productInput {
@@ -270,17 +273,17 @@ body {
 .product__content {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding: 16px;
   width: 100%;
-  justify-content: space-between;
   align-items: end;
   transition: width 300ms ease-out;
 }
 .product__description {
   flex: 1;
   display: flex;
-  width: inherit;
   flex-direction: column;
+  width: inherit;
 }
 .product__title, .product__subtitle {
   text-overflow: ellipsis;

@@ -8,3 +8,29 @@ $grey: #353535;
 $grey2: #eaeaea;
 $grey4: #7e7e7e;
 $greenFont: #008766;
+
+// [Mixins]
+@mixin flex-container($direction: null, $justify: null, $align: null) {
+  display: flex;
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $justify {
+    justify-content: $justify;
+  }
+  @if $align {
+    align-items: $align;
+  }
+}
+
+@mixin text-style($size: null, $weight: null, $line-height: null) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $line-height {
+    line-height: $line-height;
+  }
+}

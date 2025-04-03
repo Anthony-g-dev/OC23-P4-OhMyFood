@@ -1,5 +1,5 @@
 // ##### IMPORTS #####
-// @use "_globals.scss";
+@use "../_globals.scss" as *;
 
 
 // ##### CODE #####
@@ -11,8 +11,7 @@
     color: white;
     background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
     border-radius: 25px;
-    font-size: 16px;
-    line-height: 19px;
+    @include text-style(16px, 400, 19px);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     transition: box-shadow 300ms ease-out, filter 300ms ease-out;
     &:hover {

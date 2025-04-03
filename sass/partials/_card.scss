@@ -21,9 +21,7 @@
             color: $greenFont;
             background-color: $tertiary;
             border-radius: 2px;
-            font-size: 14px;
-            line-height: 16px;
-            font-weight: 500;
+            @include text-style(14px, 500, 16px);
         }
     }
     &__image {
@@ -34,22 +32,16 @@
     }
     &__content {
         padding: 13px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include flex-container(row, space-between);
     }
     &__informations {
-        display: flex;
-        flex-direction: column;
+        @include flex-container(column);
     }
     &__title {
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 21px;
+        @include text-style(18px, bold, 21px);
     }
     &__description {
-        font-size: 17px;
-        line-height: 20px;
+        @include text-style(17px, normal, 20px);
     }
     &__heartInput {
         display: none;
