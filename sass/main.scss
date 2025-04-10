@@ -1,13 +1,10 @@
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+@use 'base/base';
 
-@import 'base/base';
+@use 'components/button';
+@use 'components/card';
 
-@import 'components/button';
-@import 'components/card';
+@use 'layout/header';
+@use 'layout/footer';
 
-@import 'layout/header';
-@import 'layout/footer';
-
-@import 'pages/home';
-@import 'pages/menus';
+@use 'pages/home';
+@use 'pages/menus';
