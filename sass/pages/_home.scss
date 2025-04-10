@@ -1,11 +1,13 @@
-// ##### IMPORTS #####
-@use "_globals.scss" as *;
-@use "main.scss";
-@use "partials/card";
+.location {
+	padding: 15px 0;
+	@include flex-container(row, center);
+	gap: 17px;
+	background-color: $grey2;
+	&__text {
+			font-weight: 500;
+	}
+}
 
-
-// ##### CODE #####
-// Start here.. [!Important (1.0.0.0.0)] [Inline CSS (0.1.0.0.0)] [#ID (0.0.1.0.0)] [.class (0.0.0.1.0)] [tag (0.0.0.0.1)]
 .callToActionSection {
     @include flex-container(column, $align: center);
     padding: 40px 30px;
